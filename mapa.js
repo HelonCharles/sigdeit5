@@ -72,6 +72,17 @@ var google = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
     renderer: L.svg()
   });*/
 
+//Print Map
+
+/*var printMap = L.easyPrint({
+    tileLayer: google,
+    sizeModes: ['Current', 'A4Landscape', 'A4Portrait'],
+    filename: 'mapDIV',
+    exportOnly: true,
+    hideControlContainer: true,
+    position: 'bottomleft'
+}).addTo(map);*/
+
 
 //Draw Control
 
@@ -129,6 +140,15 @@ L.control.groupedLayers(mapas, municipios).addTo(map);
 L.control.groupedLayers(null, municipios).addTo(map);*/
 L.control.groupedLayers(null, rodovias).addTo(map);
 L.control.groupedLayers(null, pontes).addTo(map);
+
+var printMap = L.easyPrint({
+    tileLayer: google,
+    sizeModes: ['Current', 'A4Landscape', 'A4Portrait'],
+    filename: 'mapDIV',
+    exportOnly: true,
+    hideControlContainer: true,
+    position: 'bottomleft'
+}).addTo(map);
 
 //StyleEditor
 

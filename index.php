@@ -130,7 +130,26 @@
 </head>
 
 <body>
-    <div id='mapDIV'></div>
+     <!-----------------------side bar vindo do gisdeit------------------------->
+
+     <div class="d-flex h-100">
+        <div class="row m-0 w-100">
+            
+            <div id="sidebar" class="col-2 h-100">
+                <h3 class="titulo-centralizado">Controles</h3>
+                    <ul>
+                        <li class="itens">Pesquisa</li>
+                        <li class="itens">Objeto1</li>
+                        <li class="itens">Objeto2</li>
+                        <li class="itens">Objeto3</li>
+                    </ul>
+            </div>
+            <div id="mapDIV" class="col"></div>
+            <div id="Barra Superior"class="row"></div>
+        </div>
+
+        
+    </div>
 
     <!--<input type="button" onclick= "removeMap(google, osm)" value="Google Satélite">
     <input type="button" onclick="removeMap(osm, google)" value="Google Streets">-->
