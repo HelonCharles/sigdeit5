@@ -132,24 +132,67 @@
 <body>
      <!-----------------------side bar vindo do gisdeit------------------------->
 
+    <!--<div class="header">
+        <h3>SEINF - Secretaria Estadual de Infraestrutura de Roraima</h1>
+        <h4>DEIT - Departamento de Infraestrutura de Transporte</h2>
+        <h4>GIS-DEIT - Sistema de Informações Geograficas DEIT</h2>
+    </div>-->
+    
      <div class="d-flex h-100">
         <div class="row m-0 w-100">
-            
-            <div id="sidebar" class="col-2 h-100">
-                <h3 class="titulo-centralizado">Controles</h3>
+                   
+            <div id="sidebar" class="col-3 h-100">
+
+                <div>
+                    <div>
+                        <h6 style="float:left;">Consulte por Arquivo (Json/GeoJson - GEO)</h6>
+                    </div>
+                        <input type="file" id="arquivo" class="form-control">
+                        <input class="btn btn-primary" type="button" onclick="removerLayJson()"  value="Remover Tema" id="remLay">
+
+                    <div>
+                        <h6 style="float:left;">Consulte por ShapeFile (.zip) </h6>
+                        <input type="file" id="shap" class="form-control">
+                        <input class="btn btn-primary" type="button" onclick="removerLayShap()"  value="Remover Tema" id="remLay">
+                    </div>
+
+                    <div>
+                        <h5>Consulte por Coordenada</h5>
+
+                        <label for="latitude">Latitude</label>
+                        <input type="text" class="form-control" id="latitude" name="latitude" placeholder="ex. 0.0000000000000000">
+
+                        <label for="longitude">Longitude</label>
+                        <input type="text" class="form-control" id="longitude" name="longitude" placeholder="ex. -0.0000000000000000">
+
+                        <input type="submit" class="btn btn-primary" onclick="addMarcador()" value="Enviar" id="remLay">
+                        <input class="btn btn-primary" type="button" onclick="removerTema()"  value="Remover Marcador" id="remLay">
+                    </div>    
+                        
+
+              
+                </div>
+                <!--<h3 class="titulo-centralizado">Controles</h3>
                     <ul>
                         <li class="itens">Pesquisa</li>
                         <li class="itens">Objeto1</li>
                         <li class="itens">Objeto2</li>
                         <li class="itens">Objeto3</li>
-                    </ul>
+                    </ul>-->
             </div>
             <div id="mapDIV" class="col"></div>
-            <div id="Barra Superior"class="row"></div>
+            
         </div>
 
         
     </div>
+
+    <script src="./itensSidebar/file.js"></script>
+    <script src="./itensSidebar/consultaShap.js"></script>
+    <script src="/itensSidebar/leaflet.shpfile.js"></script>
+    <script src="/itensSidebar/shp.js"></script>
+    <script src="/itensSidebar/bundle.js"></script>
+    
 
     <!--<input type="button" onclick= "removeMap(google, osm)" value="Google Satélite">
     <input type="button" onclick="removeMap(osm, google)" value="Google Streets">-->

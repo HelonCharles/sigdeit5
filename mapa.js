@@ -45,6 +45,7 @@ var map = L.map(document.getElementById('mapDIV'), {
 
 var zoom_bar = new L.Control.ZoomBar({position: 'topleft'}).addTo(map);
 
+
 //--------------------------------------------------------------------
 
 var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -56,6 +57,8 @@ var google = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3']
 }).addTo(map);
+
+
 
 /*function removeMap(mapa1, mapa2) {
     
@@ -81,8 +84,8 @@ var google = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
     exportOnly: true,
     hideControlContainer: true,
     position: 'bottomleft'
-}).addTo(map);*/
-
+}).addTo(map);
+*/
 
 //Draw Control
 
@@ -102,6 +105,8 @@ map.on("draw:created", function(e){
     var layer = e.layer;
     drawnFeatures.addLayer(layer);
 });
+
+
 
 
 var mapas = {
@@ -141,13 +146,13 @@ L.control.groupedLayers(null, municipios).addTo(map);*/
 L.control.groupedLayers(null, rodovias).addTo(map);
 L.control.groupedLayers(null, pontes).addTo(map);
 
-var printMap = L.easyPrint({
+/*var printMap = L.easyPrint({
     tileLayer: google,
     sizeModes: ['Current', 'A4Landscape', 'A4Portrait'],
     filename: 'mapDIV',
     exportOnly: true,
     hideControlContainer: true,
-    position: 'bottomleft'
+    float: 'left'
 }).addTo(map);
 
 //StyleEditor
@@ -155,5 +160,5 @@ var printMap = L.easyPrint({
 /*let styleEditor = L.control.styleEditor({
     position: 'bottomrleft}).addTo(map);
 //map.addControl(styleEditor);*/
-
+//var printMap = new L.Control.printMap({float: left}).addTo(map);
 
