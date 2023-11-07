@@ -120,28 +120,74 @@
 
 
     <style>
+    .container{
+        border: 2px solid red;
+        width: 34%;
+        height: 10vh;
+        
+        
+        text-align: center;
+        display: flex;
+    }
+
+    .h4{
+        margin: 0;
+        padding: 0%;
+    }
+    .p{
+        margin: 0;
+        padding: 0%;
+        
+    }
+    
     #mapDIV {
         
-        height: 100vh;
-        
+        height: 90vh;
+        display: flex;
+        width: 70vw;
         border: solid 1px black;
     }
+
+    
+    .sidebar{
+        border: 2px solid red;
+        height: 100%;
+    }
+    
     </style>
+
+    
 </head>
 
 <body>
      <!-----------------------side bar vindo do gisdeit------------------------->
 
-    <!--<div class="header">
-        <h3>SEINF - Secretaria Estadual de Infraestrutura de Roraima</h1>
-        <h4>DEIT - Departamento de Infraestrutura de Transporte</h2>
-        <h4>GIS-DEIT - Sistema de Informações Geograficas DEIT</h2>
-    </div>-->
+    <div class="container">
+        <div>
+            <h4>SEINF - Secretaria Estadual de Infraestrutura de Roraima</h4>
+            <p><b>DEIT - Departamento de Infraestrutura de Transporte</b> <br>
+            GIS-DEIT - Sistema de Informações Geograficas DEIT    
+            </p>
+        </div>
+        <!--<h4>SEINF - Secretaria Estadual de Infraestrutura de Roraima</h4>
+        <p>DEIT - Departamento de Infraestrutura de Transporte <br>
+        GIS-DEIT - Sistema de Informações Geograficas DEIT    
+        </p>-->
     
-     <div class="d-flex h-100">
+    
+    <!--<ul>
+            <h4>SEINF - Secretaria Estadual de Infraestrutura de Roraima</h4>
+            <h5>DEIT - Departamento de Infraestrutura de Transporte</h5>
+            <h5>GIS-DEIT - Sistema de Informações Geograficas DEIT</h5>
+        </ul>-->
+        
+                
+    </div>
+    
+    <div class="d-flex h-100">
         <div class="row m-0 w-100">
                    
-            <div id="sidebar" class="col-3 h-100">
+            <div id="sidebar" class="col-3">
 
                 <div>
                     <div>
